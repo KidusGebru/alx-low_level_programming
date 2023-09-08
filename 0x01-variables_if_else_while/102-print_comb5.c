@@ -19,18 +19,17 @@ int main(void)
 			{
 				for (g4 = g22; g4 <= 57; g4++)
 				{
-					if (!(g1 == g3 && g2 == g4))
+					if (g1 == g3 && g2 == g4)
+						continue;
+					putchar(g1);
+					putchar(g2);
+					putchar(32);
+					putchar(g3);
+					putchar(g4);
+					if (!(g1 == 57 && g2 == 56 && g3 == 57 &&  g4 == 57))
 					{
-						putchar(g1);
-						putchar(g2);
+						putchar(44);
 						putchar(32);
-						putchar(g3);
-						putchar(g4);
-						if (!(g1 == 57 && g2 == 56 && g3 == 57 &&  g4 == 57))
-						{
-							putchar(44);
-							putchar(32);
-						}
 					}
 				}
 				g22 = 48;
