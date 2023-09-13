@@ -1,12 +1,17 @@
-#include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Print letters a to z in lowercase
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	int i;
+
+	for (i = 97; i <= 122; i++)
+	{
+		_putchar(i);
+	}
+	_putchar(10);
+	return;
 }
