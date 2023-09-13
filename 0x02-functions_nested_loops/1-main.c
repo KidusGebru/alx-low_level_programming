@@ -1,7 +1,8 @@
 #include "main.h"
-#include <limits.h>
+#include <stdio.h>
 
 int main(void)
 {
-	times_table();
+	printf("%d\n", add(89, 9));
+	return(0);
 }
