@@ -12,7 +12,7 @@ void jack_bauer(void)
 	{
 		for (mn = 0; mn <= 59; mn++)
 		{
-			if (mn < 9)
+			if (hr < 9)
 			{
 				_putchar('0');
 				_putchar('0' + hr);
