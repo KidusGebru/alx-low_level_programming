@@ -1,11 +1,10 @@
-#include "main.h"
 #include <stdio.h>
 /**
- * print_sum - Prints sum of natural numbers divisible by 3 or 5 upto 98
+ * main - Prints sum of natural numbers divisible by 3 or 5 upto 98
  *
  * Return: void
  */
-void print_sum(void)
+void main(void)
 {
 	int i, sum = 0;
 
