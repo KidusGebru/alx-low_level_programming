@@ -14,11 +14,10 @@ void print_to_98(int a)
 		direction = -1;
 	else
 		direction = 1;
-	printf("Starting ... with %d \n", direction);
 
 	printf("%d", a);
 
-	while ( a != 98)
+	while (a != 98)
 	{
 		a += direction;
 		printf(", %d", a);
