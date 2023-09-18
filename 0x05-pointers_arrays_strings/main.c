@@ -3,12 +3,10 @@
 
 int main(void)
 {
-	int len;
 	char *str;
 
-	str = "m";
-	len = _strlen(str);
+	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+	_puts(str);
 
-	printf("%d\n", len);
 	return(0);
 }
