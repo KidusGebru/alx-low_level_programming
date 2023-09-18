@@ -6,7 +6,7 @@ int main(void)
 	int len;
 	char *str;
 
-	str = "M";
+	str = "m";
 	len = _strlen(str);
 
 	printf("%d\n", len);
