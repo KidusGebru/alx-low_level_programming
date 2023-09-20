@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	char s1[10] = "Hello ";
+	char s1[98] = "Hello ";
 	char s2[] = "world!\n";
 	char *ptr;
 
