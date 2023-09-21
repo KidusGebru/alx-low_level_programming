@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * cap_string - Changes lower to upper case letter in str
- * @str: The string
- *
+ * chkSep - Check if character is among separators
+ * @seps: Separators list
+ * @ch: Characer from str
  * Return: Void
  */
 
@@ -22,6 +22,13 @@ char chkSep(char *seps, char ch)
 	}
 	return (gotOne);
 }
+
+/**
+ * cap_string - Changes lower to upper case letter in str
+ * @str: The string
+ *
+ * Return: Void
+ */
 
 char *cap_string(char *str)
 {
