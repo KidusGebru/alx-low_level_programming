@@ -7,7 +7,7 @@
  * @ch: The character
  *
  * Return: Char of letter
- * */
+ */
 
 char chkLet(char *letters, char *leets, char ch)
 {
@@ -30,7 +30,7 @@ char chkLet(char *letters, char *leets, char ch)
  * @str: The string
  *
  * Return: Encoded string
- * */
+ */
 char *leet(char *str)
 {
 	char *letters = "aAeEoOtTlL";
