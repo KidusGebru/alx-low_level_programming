@@ -13,20 +13,29 @@ void print_diagsums(int *a, int size)
 	int i, tot;
 	unsigned int foreSum = 0, backSum = 0;
 
-	tot = size * size;
-	for (i = 0; i < tot; i++)
+	if (size == 1)
 	{
-		if ((i < tot - 1 && i > 0) && (i % (size - 1) == 0))
-		{
-			backSum += *(a + i);
-		}
-
-		if (i % (size + 1) == 0)
-		{
-			foreSum += *(a + i);
-		}
+		printf("%u, %u\n", *(a + 0), *(a + 0));
 	}
-	printf("%u, ", foreSum);
-	printf("%u\n", backSum);
+	else if (size == 0)
+	{
+		printf("%d, %d\n", 0, 0);
+	}
+	else
+	{
+		tot = size * size;
+		for (i = 0; i < tot; i++)
+		{
+			if ((i < tot - 1 && i > 0) && (i % (size - 1) == 0))
+			{
+				backSum += *(a + i);
+			}
 
+			if (i % (size + 1) == 0)
+			{
+				foreSum += *(a + i);
+			}
+		}
+		printf("%u, %u\n", foreSum, backSum);
+	}
 }
