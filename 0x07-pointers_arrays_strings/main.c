@@ -8,12 +8,17 @@
  *     */
 int main(void)
 {
-	    char *s = "hello, world is not";
-	        char *f = "world";
-		    char *t;
-
-		        t = _strstr(s, f);
-			    printf("%s\n", t);
-			        return (0);
+	    char board[8][8] = {
+		            {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+			            {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+				            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+					            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+						            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+							            {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+								            {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+									            {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+										        };
+	        print_chessboard(board);
+		    return (0);
 }
 
