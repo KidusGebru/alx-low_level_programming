@@ -2,8 +2,11 @@
 #include <stdio.h>
 
 /**
- *  main - prints name of the compiled progra 
- *  Return: 0
+ * main - prints name of the compiled progra
+ * @argc: Argument counter
+ * @argv: Arguments values
+ *
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
