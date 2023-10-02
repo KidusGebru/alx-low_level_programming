@@ -33,8 +33,11 @@ int main(int argc, char *argv[])
 				{
 					if (!(*(argv[i] + j) >= '0' && *(argv[i] + j) <= '9'))
 					{
-						printf("Error\n");
-						return (1);
+						if (j > 0 || *(argv[i] + j) != '-')
+						{
+							printf("Error\n");
+							return (1);
+						}
 					}
 					j++;
 				}
