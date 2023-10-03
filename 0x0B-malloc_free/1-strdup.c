@@ -3,7 +3,7 @@
 
 /**
  * _strdup - Creates copy of a string argument in memory
- * @str; Argument string
+ * @str: Argument string
  *
  * Return: Pointer to copy in memory
  */
@@ -22,8 +22,8 @@ char *_strdup(char *str)
 	dup = malloc(++i * sizeof(dup));
 	if (dup == NULL)
 		return (NULL);
-	
-	while (j < i)
+
+	while (j <= i)
 	{
 		dup[j] = str[j];
 		j++;
