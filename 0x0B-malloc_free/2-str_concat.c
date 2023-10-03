@@ -27,10 +27,10 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	if (len1 + len2 == 0)
-		return (NULL);
+		return ("");
 
 	lenres = len1 + len2;
-	res = malloc(lenres * sizeof(res));
+	res = malloc(lenres * sizeof(char));
 	if (res == NULL)
 		return (NULL);
 
