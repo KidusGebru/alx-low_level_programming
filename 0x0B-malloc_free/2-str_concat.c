@@ -26,11 +26,12 @@ char *str_concat(char *s1, char *s2)
 			len2++;
 	}
 
-	if (len1 + len2 == 0)
-		return ("");
-
 	lenres = len1 + len2;
-	res = malloc(lenres * sizeof(char));
+	if (lenres == 0)
+		res = malloc(sizeof(char));
+	else
+		res = malloc(lenres * sizeof(char) - 1);
+
 	if (res == NULL)
 		return (NULL);
 
