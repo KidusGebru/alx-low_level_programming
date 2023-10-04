@@ -54,13 +54,16 @@ char **strtow(char *str)
 		return (NULL);
 
 	size = get_words(str, begs, ends);
+	if (size == 0)
+		return (NULL);
+
 	words = malloc(size * sizeof(char *) + 1);
 	if (words == NULL)
 		return (NULL);
 
 	while (cnt < size)
 	{
-		words[cnt] = malloc((ends[cnt] - begs[cnt] + 2) * sizeof(char));
+		words[cnt] = malloc((ends[cnt] - begs[cnt] + 3) * sizeof(char));
 		if (words[cnt] == NULL)
 			return (NULL);
 		i = 0;
