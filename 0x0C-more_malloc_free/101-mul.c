@@ -55,14 +55,13 @@ void _checkDigit(char *arr[], unsigned int begs[], unsigned int ends[], int ac)
 
 /**
  * _multiply - Multiplies both numbers
- * @argv: Input strings
  * @trim: Number start position
  * @len: Length of strings
  *
  * Return: Pointer to location in memory of result
  */
 
-char *_multiply(char *argv[], unsigned int trim[], unsigned int len[])
+char *_multiply(unsigned int trim[], unsigned int len[])
 {
 	char *res;
 	unsigned int sh_cnt, res_len = (len[0] - trim[0]) + (len[1] - trim[1]) + 2;
@@ -98,16 +97,17 @@ int main(int argc, char *argv[])
 	_checkDigit(argv, trim, len, 2);
 
 	if ((len[0] - trim[0]) > (len[1] - trim[1]))
-		result = _multiply(argv, trim, len);
+		result = _multiply(trim, len);
 	else
-		result = _multiply(argv, trim, len);
+		result = _multiply(trim, len);
 
 	while (result[i] != '\0')
 	{
 		_putchar(result[i]);
 		i++;
 	}
-	_putchar('\0');
+	_putchar('\n');
 	free(result);
+	return (0);
 }
 
