@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * _prints - Prints n bytes of a function code
+ * _print - Prints n bytes of a function code
  * @f: The function
  * @n: Number of bytes to print
  *
@@ -18,7 +18,7 @@ void _print(int (*f)(int, char**), int n)
 	{
 		if (i < n - 1)
 			printf("%02hhx ", *(func + i));
-		else	
+		else
 			printf("%02hhx", *(func + i));
 	}
 
