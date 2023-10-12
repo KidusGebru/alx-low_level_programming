@@ -8,6 +8,6 @@
  *     */
 int main(void)
 {
-	    print_all("ceiss", 'B', 3, NULL, "stSchool");
+	    print_strings("NULL", 2, NULL, "Django");
 	        return (0);
 }

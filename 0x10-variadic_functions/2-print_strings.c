@@ -2,6 +2,22 @@
 #include <stdio.h>
 
 /**
+ * _ps - Print a string
+ * @str: The string
+ *
+ * Return: Nothing
+ */
+void _ps(char *str)
+{
+	char *_str = str;
+
+	if (_str == NULL)
+		_str = "(nil)";
+
+	printf("%s", _str);
+}
+
+/**
  * print_strings - Prints all strings in argumnet separated by other string
  * @separator: Separator string
  * @n: Total number of arguments
@@ -13,22 +29,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list arg_ptr;
 	unsigned int i;
-	char *arg;
+	char *_sep = "";
+
+	if (separator != NULL)
+		_sep = (char *)separator;
 
 	va_start(arg_ptr, n);
 	for (i = 0; i < n - 1; i++)
 	{
-		arg = va_arg(arg_ptr, char *);
-		if (arg != NULL)
-		{
-			printf("%s %s\n", arg, separator);
-		}
-		/*
-
-		if (separator != NULL)
-			printf("%s%s", str, separator);
-		else
-			printf("%s", str);*/
+		_ps(va_arg(arg_ptr, char *));
+		printf("%s", _sep);
 	}
-	printf("%s\n", va_arg(arg_ptr, char *));
+	_ps(va_arg(arg_ptr, char *));
+	va_end(arg_ptr);
+
+	printf("\n");
 }
