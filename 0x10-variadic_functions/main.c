@@ -8,7 +8,6 @@
  *     */
 int main(void)
 {
-	    print_numbers(", ", 4, 0, 98, -1024, 402);
-	    print_numbers(NULL, 2, 24, 5689);
-	    return (0);
+	    print_all("ceiss", 'B', 3, NULL, "stSchool");
+	        return (0);
 }
