@@ -21,21 +21,16 @@ void _free_list(listint_t *head)
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *temp;
-
 	if (head == NULL)
 		return;
 
 	if (*head == NULL)
 	{
-		head = NULL;
+		*head = NULL;
 		return;
 	}
 
-	temp = *head;
-	if (temp->next)
-		_free_list(temp);
+	_free_list(*head);
 
 	*head = NULL;
-
 }
