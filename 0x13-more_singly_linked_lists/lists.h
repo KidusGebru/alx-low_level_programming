@@ -3,6 +3,16 @@
 
 #include <stdlib.h>
 
+/**
+ * struct listint_add_s - List of litint_t nodes' address
+ * @add: listint_t node address
+ * @next: Pointer to next node in this list
+ */
+typedef struct listint_add_s
+{
+	void *add;
+	struct listint_add_s *next;
+} listint_add_t;
 
 /**
  * struct list_s - Singly linked list
@@ -30,6 +40,7 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
+size_t print_listint_safe(const listint_t *head);
 
 #endif /* KIDUS_LISTS_H */
 
