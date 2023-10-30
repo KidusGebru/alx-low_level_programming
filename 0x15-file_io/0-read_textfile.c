@@ -21,11 +21,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd < 0)
 		return (0);
 	rd_cnt = read(fd, buf, letters);
-	if (rd_cnt < 0)
+	if (rd_cnt < 0 || rd_cnt != letters)
 		return (0);
 	wr_cnt = write(2, buf, rd_cnt);
 	free(buf);
-	if (wr_cnt < 0)
+	if (wr_cnt < 0 || wr_cnt != letters)
 		return (0);
 	if (close(fd) < 0)
 		return (0);
