@@ -58,6 +58,10 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		_ext(97, argv[0]);
+	if (argv[1] == NULL)
+		_ext(98, argv[1]);
+	if (argv[2] == NULL)
+		_ext(98, argv[2]);
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
 		_ext(98, argv[1]);

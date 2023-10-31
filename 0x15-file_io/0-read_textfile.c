@@ -18,20 +18,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buf == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd < 0)
+	if (fd == -1)
 		return (0);
 	rd_cnt = read(fd, buf, letters);
-	if (rd_cnt < 0)
+	if (rd_cnt == -1)
 		return (0);
 
 	wr_cnt = write(2, buf, rd_cnt);
 	free(buf);
-	if (wr_cnt < 0)
+	if (wr_cnt == -1)
 		return (0);
 	else if (wr_cnt != rd_cnt)
 		return (0);
 
-	if (close(fd) < 0)
+	if (close(fd) == -1)
 		return (0);
 	return (wr_cnt);
 }
