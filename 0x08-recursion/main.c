@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  *  * main - check the code
@@ -7,7 +8,34 @@
  *     */
 int main(void)
 {
-	    _print_rev_recursion("\nwrwer Colton Walker");
-	        return (0);
+	    int r;
+
+	        r = wildcmp("main.c", "*.c");
+		    printf("%d\n", r);
+		        r = wildcmp("main.c", "m*a*i*n*.*c*");
+			    printf("%d\n", r);
+			        r = wildcmp("main.c", "main.c");
+				    printf("%d\n", r);
+				        r = wildcmp("main.c", "m*c");
+					    printf("%d\n", r);
+					        r = wildcmp("main.c", "ma********************************c");
+						    printf("%d\n", r);
+						        r = wildcmp("main.c", "*");
+							    printf("%d\n", r);
+							        r = wildcmp("main.c", "***");
+								    printf("%d\n", r);
+								        r = wildcmp("main.c", "m.*c");
+									    printf("%d\n", r);
+									        r = wildcmp("main.c", "**.*c");
+										    printf("%d\n", r);
+										        r = wildcmp("main-main.c", "ma*in.c");
+											    printf("%d\n", r);
+											        r = wildcmp("main", "main*d");
+												    printf("%d\n", r);
+												        r = wildcmp("abc", "*b");
+													    printf("%d\n", r);
+													        r = wildcmp("holberton-holberton.c", "holbe*rton.c");
+														    printf("%d\n", r);
+														        return (0);
 }
 
